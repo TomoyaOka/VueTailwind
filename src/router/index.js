@@ -9,6 +9,7 @@ const routes = [
     path: "/",
     name: "home",
     component: HomeView,
+    meta: { title: "TodoList", desc: "" },
   },
 ];
 

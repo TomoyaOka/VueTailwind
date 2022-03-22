@@ -1,7 +1,11 @@
 <template>
   <div id="app">
-    <h1 class="Title">TodoList</h1>
-    <router-view />
+    <div class="TitleCover">
+      <h1 class="Title">TodoList</h1>
+    </div>
+    <div class="Wrp">
+      <router-view />
+    </div>
   </div>
 </template>
 
@@ -52,16 +56,30 @@ body {
 }
 
 #app {
-  max-width: var(--max);
-  margin: 2rem auto 0 auto;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+}
+.Wrp {
+  max-width: var(--max);
+  margin: 2rem auto 0 auto;
   padding: 0 2rem;
+}
+.TitleCover {
+  background-color: rgb(98, 142, 199);
 }
 
 .Title {
+  max-width: var(--max);
   font-size: 4.8rem;
+  margin: auto;
+  padding: 4rem 2rem;
+}
+@media (max-width: 768px) {
+  .Title {
+    font-size: 2.4rem;
+    padding: 2rem 2rem;
+  }
 }
 </style>

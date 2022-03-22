@@ -1,22 +1,18 @@
 <template>
-  <div class="mb-14">
-    <label for="" class="block mb-4">タスクのメモ</label>
-    <textarea
-      name="memo"
-      id=""
-      cols="30"
-      rows="10"
-      class="TextArea w-full text-left px-6 py-5"
-    ></textarea>
+  <div>
+    <label for="" class="block mb-1">タスク名</label>
+    <input
+      :value="value"
+      @input="$emit('input', $event.target.value)"
+      type="text"
+      class="border-b border-solid border-gray-400 w-4/5 max-w-full text-left py-2"
+      placeholder="タスクを入力"
+    />
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["value"],
+};
 </script>
-
-<style scoped>
-.TextArea {
-  border: 1px #333 solid;
-}
-</style>

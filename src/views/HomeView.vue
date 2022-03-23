@@ -29,7 +29,6 @@
 
 <script>
 import TodoTitle from "@/components/parts/TodoTitle";
-// import TodoMemo from "@/components/parts/TodoMemo";
 import TodoDelete from "@/components/parts/TodoDelete";
 import TodoSubmit from "@/components/parts/TodoSubmit";
 
@@ -37,7 +36,6 @@ export default {
   name: "HomeView",
   components: {
     TodoTitle,
-    // TodoMemo,
     TodoSubmit,
     TodoDelete,
   },
@@ -49,9 +47,13 @@ export default {
   },
   methods: {
     addTodo() {
-      if (this.newTodo === "") return;
-      this.todos.push(this.newTodo);
-      this.newTodo = "";
+      if (this.newTodo === "") {
+        alert("タスクを入力してください");
+        return;
+      } else {
+        this.todos.push(this.newTodo);
+        this.newTodo = "";
+      }
     },
     deleteTodo(i) {
       this.todos.splice(i, 1);
@@ -67,7 +69,6 @@ export default {
 }
 .TodoInput {
   max-width: var(--max);
-  background-color: #e0e0e0;
   padding: 4rem 0;
   margin-bottom: 3rem;
 }

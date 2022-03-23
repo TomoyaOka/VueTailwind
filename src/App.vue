@@ -52,7 +52,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  background-color: #e0e0e0;
+  // background-color: #e0e0e0;
 }
 
 #app {
@@ -73,6 +73,7 @@ body {
 .Title {
   max-width: var(--max);
   font-size: 4.8rem;
+  color: #fff;
   margin: auto;
   padding: 4rem 2rem;
 }

@@ -4,11 +4,8 @@
       <div class="TodoText">
         <TodoTitle v-model="newTodo" />
       </div>
-      <!-- <div class="TodoText">
-        <TodoMemo v-model="newMemo" />
-      </div> -->
       <div class="SubmitBtn">
-        <TodoSubmit @click.native="addTodo()" />
+        <TodoSubmit @btnClick="addTodo()" />
       </div>
     </section>
     <section class="TodoDisplay">

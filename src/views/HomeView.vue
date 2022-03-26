@@ -59,7 +59,6 @@ export default {
     },
     setTodos() {
       localStorage.setItem("todos", JSON.stringify(this.todos));
-      this.setTodos();
     },
   },
 };

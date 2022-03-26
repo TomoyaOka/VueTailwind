@@ -72,7 +72,7 @@ export default {
 
 .TodoDisplay {
   max-width: var(--max);
-  min-height: 20rem;
+  min-height: 50rem;
   margin: 0 auto 3rem auto;
   padding: 2rem 1rem;
 }

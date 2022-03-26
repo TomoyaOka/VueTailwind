@@ -1,6 +1,6 @@
 <template>
   <div>
-    <label for="" class="block mb-1">タスク名</label>
+    <label for="" class="block mb-1">TaskName</label>
     <input
       :value="value"
       @input="$emit('input', $event.target.value)"

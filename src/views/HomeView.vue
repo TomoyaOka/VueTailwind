@@ -38,7 +38,7 @@ export default {
   },
   data() {
     return {
-      todos: [],
+      todos: JSON.parse(localStorage.getItem("todos")) || [],
       newTodo: "",
     };
   },
@@ -50,10 +50,16 @@ export default {
       } else {
         this.todos.push(this.newTodo);
         this.newTodo = "";
+        this.setTodos();
       }
     },
     deleteTodo(i) {
       this.todos.splice(i, 1);
+      this.setTodos();
+    },
+    setTodos() {
+      localStorage.setItem("todos", JSON.stringify(this.todos));
+      this.setTodos();
     },
   },
 };
